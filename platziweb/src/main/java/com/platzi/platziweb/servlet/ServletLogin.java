@@ -11,7 +11,7 @@ import java.io.PrintWriter;
 /***
  * Servlet para login
  */
-@WebServlet("/ServletLogin")
+@WebServlet("/abc123")
 public class ServletLogin extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -19,20 +19,20 @@ public class ServletLogin extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String usuario = request.getParameter("usuario");
-        String empresa = request.getParameter("empresa");
+        String user = request.getParameter("user");
+        String enterprise = request.getParameter("enterprise");
 
-        PrintWriter escritor = response.getWriter();
+        PrintWriter outWriter = response.getWriter();
 
         // Validaciones
-        if( usuario != null && empresa != null){
-            if(empresa.equals("platzi")){
-                escritor.println("Welcome Platzi");
+        if( user != null && enterprise != null){
+            if(enterprise.equals("platzi")){
+                outWriter.println("Welcome Platzi");
             }else{
-                escritor.println("Bienvenido....");
+                outWriter.println("Welcome....");
             }
         }else{
-            escritor.println("Usuario incorrecto");
+            outWriter.println("Wrong User");
         }
 
     }
