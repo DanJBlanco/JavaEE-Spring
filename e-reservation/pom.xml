@@ -57,6 +57,18 @@
 			<version>2.7.0</version>
 		</dependency>
 
+		<!--Seguridad-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+
+		<!--Thymeleaf-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+
 		<!--TEST-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
